@@ -35,5 +35,15 @@ model = dict(
         in_channels=[32, 64, 128, 256],
         out_channels=256))
 # learning policy
+
+classes = ('top', 'blouse', 't-shirt', 'Knitted fabri', 'shirt', 'bra top',
+           'hood', 'blue jeans', 'pants', 'skirt', 'leggings', 'jogger pants',
+           'coat', 'jacket', 'jumper', 'padding jacket', 'best', 'kadigan',
+           'zip up', 'dress', 'jumpsuit')
+
+
+data = dict(train=dict(classes=classes), val=dict(classes=classes), test=dict(classes=classes))
+
+
 lr_config = dict(step=[16, 19])
-total_epochs = 20
+total_epochs = 24

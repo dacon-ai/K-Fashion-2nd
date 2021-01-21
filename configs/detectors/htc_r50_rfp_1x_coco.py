@@ -22,3 +22,14 @@ model = dict(
             conv_cfg=dict(type='ConvAWS'),
             pretrained='torchvision://resnet50',
             style='pytorch')))
+
+
+classes = ('top', 'blouse', 't-shirt', 'Knitted fabri', 'shirt', 'bra top',
+           'hood', 'blue jeans', 'pants', 'skirt', 'leggings', 'jogger pants',
+           'coat', 'jacket', 'jumper', 'padding jacket', 'best', 'kadigan',
+           'zip up', 'dress', 'jumpsuit')
+
+data = dict(train=dict(classes=classes), val=dict(classes=classes), test=dict(classes=classes))
+# learning policy
+lr_config = dict(step=[34, 42])
+total_epochs = 48
